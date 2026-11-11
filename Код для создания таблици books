@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS books (
+    book_id SERIAL PRIMARY KEY,
+    author_id INTEGER NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    publish_year INTEGER,
+    pages INTEGER,
+    publisher VARCHAR(150)
+);
