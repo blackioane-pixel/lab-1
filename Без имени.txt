@@ -1,0 +1,27 @@
+
+CREATE TABLE books (...);
+CREATE TABLE subscriptions (...);
+
+
+INSERT INTO books ...;
+INSERT INTO subscriptions ...;
+
+SELECT ... FROM information_schema.table_constraints ...;
+
+INSERT INTO books ... RETURNING book_id;
+DELETE FROM books WHERE title = 'Тестовая книга';
+
+UPDATE books SET book_id = 100 WHERE book_id = 1;
+SELECT * FROM subscriptions WHERE reader_id = 101;
+DELETE FROM books WHERE book_id = 2;
+SELECT * FROM subscriptions WHERE book_id = 2;
+
+UPDATE books SET book_id = 1 WHERE book_id = 100;
+INSERT INTO books (book_id, author_id, title, publish_year, pages, publisher)
+VALUES (2, 2, 'Преступление и наказание', 1866, 671, 'Русский вестник')
+ON CONFLICT (book_id) DO NOTHING;
+INSERT INTO subscriptions (reader_id, book_id, issue_date, duration_days, is_returned)
+VALUES (102, 2, '2026-01-15', 14, FALSE);
+
+SELECT COUNT(*) FROM books;
+SELECT COUNT(*) FROM subscriptions;
