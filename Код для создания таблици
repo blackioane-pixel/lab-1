@@ -4,10 +4,4 @@ CREATE TABLE IF NOT EXISTS subscriptions (
     book_id INTEGER NOT NULL,
     issue_date DATE NOT NULL,
     duration_days INTEGER,
-    is_returned BOOLEAN DEFAULT FALSE,
-    CONSTRAINT fk_subscription_book
-        FOREIGN KEY (book_id)
-        REFERENCES books (book_id)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE
 );
