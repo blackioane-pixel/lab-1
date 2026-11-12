@@ -1,5 +1,5 @@
 CREATE TABLE subscription (
-    reader_code INTEGER NOT NULL PRIMARY KEY,
+    reader_code INTEGER NOT NULL,
     book_id INTEGER NOT NULL,
     issue_date DATE DEFAULT CURRENT_DATE,
     term_days INTEGER NOT NULL,
