@@ -1,6 +1,6 @@
 CREATE TABLE subscription (
-    subscription_id SERIAL PRIMARY KEY,
-    book_code INTEGER NOT NULL,
+    reader_id INTEGER NOT NULL
+    book_code INTEGER NOT NULL, PRIMARY KEY 
     issue_date DATE DEFAULT CURRENT_DATE,
     term_days INTEGER NOT NULL,
     returned BOOLEAN NOT NULL,
