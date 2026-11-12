@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXISTS subscriptions (
-    subscription_id SERIAL PRIMARY KEY,
-    reader_id INTEGER NOT NULL,
+CREATE TABLE subscription (
+    reader_code INTEGER NOT NULL PRIMARY KEY,
     book_id INTEGER NOT NULL,
-    issue_date DATE NOT NULL,
-    duration_days INTEGER,
+    issue_date DATE DEFAULT CURRENT_DATE,
+    term_days INTEGER NOT NULL,
+    returned BOOLEAN NOT NULL
 );
